@@ -6,6 +6,7 @@ A cheatsheet to get you started with Hadoop
 </p>
   
 ## Installation 
+**For Master and Slave Nodes** 
 ```
 This is for RedHat
 - Install Java JDK as Hadoop depends on it
@@ -14,4 +15,14 @@ rpm -i https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.o
 rpm -i https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1-1.x86_64.rpm
 ```
 ## Configuration
+**For Master Node** 
+Configure Hadoop ```core-site.xml``` file
 ```
+cd /etc/hadoop
+ls 
+vim core-site.xml
+
+
+```
+Configure Hadoop ```hdfs-site.xml``` file
+
