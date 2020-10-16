@@ -21,10 +21,54 @@ hadoop version
 ```
 <img src="assets/installing.PNG" alt="Logo">
 ## Configuration
-**For Master Node** 
+<b>For Master Node also called NameNode</b>
 Configure Hadoop ```core-site.xml``` file
 ```
 mkdir /nn
+cd /etc/hadoop
+ls 
+vim core-site.xml
+
+<configuration>
+<property>
+<name>dfs.default.name</name>
+<value>hdfs://MasterIP:PortNo</value>
+</property>
+</configuration>
+
+```
+Configure Hadoop ```hdfs-site.xml``` file
+
+```
+<configuration>
+<property>
+<name>dfs.name.dir</name>
+<value>/nn</value>
+</property>
+</configuration>
+```
+
+Then we will have to format the /nn folder of the namenode.
+```hadoop namenode -format```
+📸
+```jps``` // we see that the process has not yet started
+``` netstat -tnlp ``` // we see that the assigned port is free
+Then we will have to start the service
+```
+hadoop-daemon.sh start namenode
+jps
+netstat -tnlp
+```
+We see that the process has started and the port is assigned
+
+
+To view the no of slave nodes connected
+```hadoop dfsadmin -report``` 
+
+<b>For Slave Node also called DataNode</b>
+Configure Hadoop ```core-site.xml``` file
+```
+mkdir /dn1
 cd /etc/hadoop
 ls 
 vim core-site.xml
@@ -33,3 +77,11 @@ vim core-site.xml
 ```
 Configure Hadoop ```hdfs-site.xml``` file
 
+```
+<configuration>
+<property>
+<name>dfs.name.dir</name>
+<value>/dn1</value>
+</property>
+</configuration>
+```
