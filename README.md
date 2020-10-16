@@ -14,12 +14,12 @@ wget https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.ora
 rpm -i -v -h jdk-8u171-linux-x64.rpm
 - Install apache hadoop
 wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1-1.x86_64.rpm
-rpm -i -v -h hadoop-1.2.1-1.x86_64.rpm
+rpm -i -v -h hadoop-1.2.1-1.x86_64.rpm --force
 - Verify if it is correctly installed with
 java -version
 hadoop version
 ```
-
+<img src="assets/installing.PNG" alt="Logo">
 ## Configuration
 **For Master Node** 
 Configure Hadoop ```core-site.xml``` file
