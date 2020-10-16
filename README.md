@@ -25,10 +25,7 @@ hadoop version
 Configure Hadoop ```core-site.xml``` file
 ```
 mkdir /nn
-cd /etc/hadoop
-ls 
-vim core-site.xml
-
+vim /etc/hadoop/core-site.xml
 <configuration>
 <property>
 <name>dfs.default.name</name>
@@ -40,6 +37,7 @@ vim core-site.xml
 Configure Hadoop ```hdfs-site.xml``` file
 
 ```
+vim /etc/hadoop/hdfs-site.xml
 <configuration>
 <property>
 <name>dfs.name.dir</name>
@@ -68,16 +66,20 @@ To view the no of slave nodes connected
 <b>For Slave Node also called DataNode</b>
 Configure Hadoop ```core-site.xml``` file
 ```
-mkdir /dn1
-cd /etc/hadoop
-ls 
-vim core-site.xml
-
-
+vim /etc/hadoop/core-site.xml
+<configuration>
+<property>
+<name>fs.default.name</name>
+<value>hdfs://MasterIP:PortNo</value>
+</property>
+</configuration>
 ```
+
 Configure Hadoop ```hdfs-site.xml``` file
 
 ```
+mkdir /dn1
+vim /etc/hadoop/hdfs-site.xml
 <configuration>
 <property>
 <name>dfs.name.dir</name>
@@ -85,3 +87,14 @@ Configure Hadoop ```hdfs-site.xml``` file
 </property>
 </configuration>
 ```
+
+Then we will have to start the service
+```
+hadoop-daemon.sh start datanode
+jps
+```
+We see that the process has started.
+
+To view the no of slave nodes connected
+```hadoop dfsadmin -report``` 
+
