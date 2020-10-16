@@ -109,5 +109,17 @@ vim /etc/hadoop/core-site.xml
 </property>
 </configuration>
 ```
+fff
+```
+    - To see how many files we have in their storage
+        hadoop fs -ls /
+    - To add a file
+        cat > file1.txt
+        Hi I am the first file
+        Ctrl+C
+        hadoop fs - put file1.txt
+    - To read the contents of the file
+        hadoop fs -cat /file1.txt
+    - To remove a file
+        hadoop fs -rm  /file1.txt
 
-To see how many files we have in their storage
