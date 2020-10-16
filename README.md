@@ -1,4 +1,4 @@
-# Hadoop-CheatSheet
+# Hadoop-CheatSheet 🐘
 
 A cheatsheet to get you started with Hadoop
 <p align="center">
@@ -98,3 +98,16 @@ We see that the process has started.
 To view the no of slave nodes connected
 ```hadoop dfsadmin -report``` 
 
+<b>For Client Node </b>
+Configure Hadoop ```core-site.xml``` file
+```
+vim /etc/hadoop/core-site.xml
+<configuration>
+<property>
+<name>fs.default.name</name>
+<value>hdfs://MasterIP:PortNo</value>
+</property>
+</configuration>
+```
+
+To see how many files we have in their storage
