@@ -55,12 +55,11 @@ Then we will have to format the /nn folder of the namenode.
     jps 
     netstat -tnlp 
 ```
-<figure>
-    <img src="assets/master before.png" alt="Logo">
-    <figcaption>Fig.1 - we see that the process has not yet started and the assigned port is free </figcaption>
-</figure>
+We see that the process has not yet started and the assigned port is free 
 
-Then we will have to start the service
+<img src="assets/master before.png" alt="Logo">
+
+#### Then we will have to start the service:
 ```
 hadoop-daemon.sh start namenode
 jps
@@ -69,38 +68,33 @@ netstat -tnlp
 We see that the process has started and the port is assigned
 <img src="assets/master successful.PNG" alt="Logo">
 
-
 To view the no of slave nodes connected
 ```hadoop dfsadmin -report``` 
 
 <img src="assets/dfsadmin master.PNG" alt="Logo">
 
-<b>For Slave Node also called DataNode</b>
-Configure Hadoop ```core-site.xml``` file
-```
-vim /etc/hadoop/core-site.xml
-<configuration>
-<property>
-<name>fs.default.name</name>
-<value>hdfs://MasterIP:PortNo</value>
-</property>
-</configuration>
-```
-
-Configure Hadoop ```hdfs-site.xml``` file
+### For Slave Node also called DataNode
 
 ```
-mkdir /dn1
-vim /etc/hadoop/hdfs-site.xml
-<configuration>
-<property>
-<name>dfs.name.dir</name>
-<value>/dn1</value>
-</property>
-</configuration>
+    vim /etc/hadoop/core-site.xml
+        <configuration>
+            <property>
+                <name>fs.default.name</name>
+                <value>hdfs://MasterIP:PortNo</value>
+            </property>
+        </configuration>
+    mkdir /dn1
+    vim /etc/hadoop/hdfs-site.xml
+        <configuration>
+            <property>
+                <name>dfs.name.dir</name>
+                <value>/dn1</value>
+            </property>
+        </configuration>
 ```
 
-Then we will have to start the service
+
+#### Then we will have to start the service
 ```
 hadoop-daemon.sh start datanode
 jps
@@ -110,19 +104,17 @@ We see that the process has started.
 To view the no of slave nodes connected
 ```hadoop dfsadmin -report``` 
 
-<b>For Client Node </b>
-Configure Hadoop ```core-site.xml``` file
+### For Client Node 
+
 ```
-vim /etc/hadoop/core-site.xml
-<configuration>
-<property>
-<name>fs.default.name</name>
-<value>hdfs://MasterIP:PortNo</value>
-</property>
-</configuration>
-```
-fff
-```
+    vim /etc/hadoop/core-site.xml
+        <configuration>
+            <property>
+                <name>fs.default.name</name>
+                <value>hdfs://MasterIP:PortNo</value>
+            </property>
+        </configuration>
+
     - To see how many files we have in their storage
         hadoop fs -ls /
     - To add a file
@@ -134,4 +126,4 @@ fff
         hadoop fs -cat /file1.txt
     - To remove a file
         hadoop fs -rm  /file1.txt
-
+```
