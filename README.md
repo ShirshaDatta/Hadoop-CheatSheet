@@ -131,12 +131,16 @@ To view the no of slave nodes connected
     - To see how many files we have in their storage
         hadoop fs -ls /
     - To add a file
-        cat > file1.txt
+        cat > /file1.txt
         Hi I am the first file
         Ctrl+C
-        hadoop fs - put file1.txt
+        hadoop fs - put /file1.txt /
     - To read the contents of the file
         hadoop fs -cat /file1.txt
     - To remove a file
         hadoop fs -rm  /file1.txt
+    - 
 ```
+We can also visualize using GUI
+<img src="assets/gui.PNG" alt="Logo">
+<img src="assets/gui1.PNG" alt="Logo">
