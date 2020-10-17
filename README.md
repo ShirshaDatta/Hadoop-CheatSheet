@@ -211,3 +211,12 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/shirsha-datta-30335a178/)
 
+<!--** How to change block size
+** Make it more readable
+** safemode and tcpdump
+** Who is the one uploading the file?
+✴️ Answer: Client gets the IP from Master and uploads the file to DataNode.
+
+**Does client go to master and then read the file on slave via Master or Does Client go to slave directly and read the data?
+✴️ Answer: Client goes to slave directly and reads the data stored on slave.
+-->
