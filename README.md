@@ -5,8 +5,8 @@ A cheatsheet to get you started with Hadoop
 <img src="https://miro.medium.com/max/1050/1*H4_yv5YskknPaJ4lWJpzXA.png">
 </p>
   
-## Installation 
-**For Master and Slave Nodes** 
+## Installation (For 1 master and multi slave and multi client nodes)
+**For Master,Slave and Client Nodes** 
 ```
 This is for RedHat
     - Install Java JDK as Hadoop depends on it
@@ -106,6 +106,7 @@ To check so:
 ```
 <img src="assets/firewalld master.PNG" alt="Logo">
 
+```
 hadoop-daemon.sh start datanode
 jps
 ```
@@ -114,7 +115,7 @@ We see that the process has started.
 
 To view the no of slave nodes connected
 
-```hadoop dfsadmin -report``` 
+```hadoop dfsadmin -report```
 <img src="assets/slave connected" alt="Logo">
 
 ### For Client Node 
@@ -137,10 +138,40 @@ To view the no of slave nodes connected
         hadoop fs - put /file1.txt /
     - To read the contents of the file
         hadoop fs -cat /file1.txt
+    - To check the size of the file
+        hadoop fs -count /file1.txt
+    - To create a directory
+        hadoop fs -mkdir /textfiles
+    -To upload a blank file on the fly
+        hadoop fs -touchz /my.txt
+    -To move a file (source➡destination)
+        hadoop fs -mv /lw.txt /textfiles
+    - To copy a file (source➡destination)
+        hadoop fs -cp /file1.txt /textfiles
     - To remove a file
         hadoop fs -rm  /file1.txt
     - 
-
+```
+The attached screenshots of the above mentioned commands are :
+<img src="assets/cmds client1.PNG" alt="Logo">
+<img src="assets/cmds client2.PNG" alt="Logo">
+<img src="assets/cmds client3.png" alt="Logo">
 ### We can also visualize using GUI
+    Namenode : MasterIP:50070
+    Datanode : SlaveIP:50075
 <img src="assets/gui.PNG" alt="Logo">
+We can visualize the uploaded files
 <img src="assets/gui1.PNG" alt="Logo">
+
+We see that if the file is small it is broken in only 1 block
+<img src="assets/gui filetxt.PNG" alt="Logo">
+We can check the size of the name.txt file like:
+```
+    -To see the permissions as well as the size of the block in bytes
+        ls -l name.txt
+    -To see the permissions as well as the size of the block 
+        ls -l -h name.txt
+```
+<img src="assets/size of nametxt.PNG" alt="Logo">
+The default DFS block size is 32768 , and therefore it is divided into blocks before storing:
+<img src="assets/gui nametxt.PNG" alt="Logo">
