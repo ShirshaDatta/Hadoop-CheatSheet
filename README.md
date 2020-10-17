@@ -49,10 +49,17 @@ The configured files:
 
 Then we will have to format the /nn folder of the namenode.
 ``` hadoop namenode -format ```
+<br>
 <img src="assets/master format.PNG" alt="Logo">
-```jps``` // we see that the process has not yet started
-``` netstat -tnlp ``` // we see that the assigned port is free
-<img src="assets/master before.PNG" alt="Logo">
+```
+    jps 
+    netstat -tnlp 
+```
+<figure>
+    <img src="assets/master before.png" alt="Logo">
+    <figcaption>Fig.1 - we see that the process has not yet started and the assigned port is free </figcaption>
+</figure>
+
 Then we will have to start the service
 ```
 hadoop-daemon.sh start namenode
