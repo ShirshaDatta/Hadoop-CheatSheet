@@ -150,12 +150,14 @@ To view the no of slave nodes connected
         hadoop fs -cp /file1.txt /textfiles
     - To remove a file
         hadoop fs -rm  /file1.txt
-    - 
+    - To checkout and explore all the available options
+        hadoop fs 
 ```
 The attached screenshots of the above mentioned commands are :
 <img src="assets/cmds client1.PNG" alt="Logo">
 <img src="assets/cmds client2.PNG" alt="Logo">
 <img src="assets/cmds client3.png" alt="Logo">
+
 ### We can also visualize using GUI
     Namenode : MasterIP:50070
     Datanode : SlaveIP:50075
@@ -173,5 +175,39 @@ We can check the size of the name.txt file like:
         ls -l -h name.txt
 ```
 <img src="assets/size of nametxt.PNG" alt="Logo">
-The default DFS block size is 32768 , and therefore it is divided into blocks before storing:
+The default DFS block size is 32768 , and therefore it is divided into blocks before storing. 
 <img src="assets/gui nametxt.PNG" alt="Logo">
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+## Cool Links to Checkout 
+
+- [How Facebook stores so much data and its statistics](https://shirshadatta2000.medium.com/how-facebook-stores-so-much-data-and-its-statistics-bd0911ad39a1)
+
+- [Facebook and Hadoop](https://www.facebook.com/notes/facebook-engineering/hadoop/16121578919/)
+
+- [How Google stores massive amounts of data](https://medium.com/@avantikadasgupta/how-google-stores-massive-amounts-of-data-bigtable-d67f49bfc40e)
+
+- [Apache Hadoop Ecosystem](https://www.cloudera.com/products/open-source/apache-hadoop.html)
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+- Your Name - Xabc Ycde
+ 
+- You can contact me at shirshadatta2000@gmail.com
+
+- Connect with me on [LinkedIn](https://www.linkedin.com/in/shirsha-datta-30335a178/)
+
