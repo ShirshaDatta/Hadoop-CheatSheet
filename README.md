@@ -28,7 +28,7 @@ mkdir /nn
 vim /etc/hadoop/core-site.xml
 <configuration>
 <property>
-<name>dfs.default.name</name>
+<name>fs.default.name</name>
 <value>hdfs://MasterIP:PortNo</value>
 </property>
 </configuration>
@@ -45,12 +45,16 @@ vim /etc/hadoop/hdfs-site.xml
 </property>
 </configuration>
 ```
+The configured files:
+<img src="assets/master files.PNG" alt="Logo">
+#Check if the port number you assigned is free, if not then change the port number in the core-site.xml
 
 Then we will have to format the /nn folder of the namenode.
 ```hadoop namenode -format```
-📸
+<img src="assets/master format.PNG" alt="Logo">
 ```jps``` // we see that the process has not yet started
 ``` netstat -tnlp ``` // we see that the assigned port is free
+<img src="assets/master before.PNG" alt="Logo">
 Then we will have to start the service
 ```
 hadoop-daemon.sh start namenode
@@ -58,10 +62,13 @@ jps
 netstat -tnlp
 ```
 We see that the process has started and the port is assigned
+<img src="assets/master successful.PNG" alt="Logo">
 
 
 To view the no of slave nodes connected
 ```hadoop dfsadmin -report``` 
+
+<img src="assets/dfsadmin master.PNG" alt="Logo">
 
 <b>For Slave Node also called DataNode</b>
 Configure Hadoop ```core-site.xml``` file
