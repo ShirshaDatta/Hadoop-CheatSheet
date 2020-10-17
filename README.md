@@ -140,7 +140,7 @@ To view the no of slave nodes connected
     - To remove a file
         hadoop fs -rm  /file1.txt
     - 
-```
-We can also visualize using GUI
+
+### We can also visualize using GUI
 <img src="assets/gui.PNG" alt="Logo">
 <img src="assets/gui1.PNG" alt="Logo">
