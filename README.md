@@ -9,48 +9,46 @@ A cheatsheet to get you started with Hadoop
 **For Master and Slave Nodes** 
 ```
 This is for RedHat
-- Install Java JDK as Hadoop depends on it
-wget https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.rpm
-rpm -i -v -h jdk-8u171-linux-x64.rpm
-- Install apache hadoop
-wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1-1.x86_64.rpm
-rpm -i -v -h hadoop-1.2.1-1.x86_64.rpm --force
-- Verify if it is correctly installed with
-java -version
-hadoop version
+    - Install Java JDK as Hadoop depends on it
+        wget https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.rpm
+        rpm -i -v -h jdk-8u171-linux-x64.rpm
+    - Install apache hadoop
+        wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1-1.x86_64.rpm
+        rpm -i -v -h hadoop-1.2.1-1.x86_64.rpm --force
+    - Verify if it is correctly installed with
+        java -version
+        hadoop version
 ```
 <img src="assets/installing.PNG" alt="Logo">
+
 ## Configuration
-<b>For Master Node also called NameNode</b>
-Configure Hadoop ```core-site.xml``` file
+### For Master Node also called NameNode
 ```
-mkdir /nn
-vim /etc/hadoop/core-site.xml
-<configuration>
-<property>
-<name>fs.default.name</name>
-<value>hdfs://MasterIP:PortNo</value>
-</property>
-</configuration>
+    mkdir /nn
+    vim /etc/hadoop/core-site.xml
+        <configuration>
+            <property>
+                <name>fs.default.name</name>
+                <value>hdfs://MasterIP:PortNo</value>
+            </property>
+        </configuration>
+
+    vim /etc/hadoop/hdfs-site.xml
+        <configuration>
+            <property>
+                <name>dfs.name.dir</name>
+                <value>/nn</value>
+            </property>
+        </configuration>
 
 ```
-Configure Hadoop ```hdfs-site.xml``` file
 
-```
-vim /etc/hadoop/hdfs-site.xml
-<configuration>
-<property>
-<name>dfs.name.dir</name>
-<value>/nn</value>
-</property>
-</configuration>
-```
 The configured files:
 <img src="assets/master files.PNG" alt="Logo">
 #Check if the port number you assigned is free, if not then change the port number in the core-site.xml
 
 Then we will have to format the /nn folder of the namenode.
-```hadoop namenode -format```
+``` hadoop namenode -format ```
 <img src="assets/master format.PNG" alt="Logo">
 ```jps``` // we see that the process has not yet started
 ``` netstat -tnlp ``` // we see that the assigned port is free
