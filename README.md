@@ -92,17 +92,30 @@ To view the no of slave nodes connected
             </property>
         </configuration>
 ```
-
+The Configured files:
+<img src="assets/slave files.PNG" alt="Logo">
 
 #### Then we will have to start the service
+Make sure that if you doing the setup locally using VM's , then the firewall should be stopped in the master node.
+To check so:
 ```
+    systemctl status firewalld
+   - If it is active then stop or disable(if you don't want to start after system reboot)
+        systemctl stop firewalld
+        systemctl disable firewalld
+```
+<img src="assets/firewalld master.PNG" alt="Logo">
+
 hadoop-daemon.sh start datanode
 jps
 ```
 We see that the process has started.
+<img src="assets/slave node done.PNG" alt="Logo">
 
 To view the no of slave nodes connected
+
 ```hadoop dfsadmin -report``` 
+<img src="assets/slave connected" alt="Logo">
 
 ### For Client Node 
 
