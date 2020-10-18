@@ -8,6 +8,7 @@ A cheatsheet to get you started with Hadoop
 ## Installation (For 1 master and multi slave and multi client nodes)
 **For Master,Slave and Client Nodes** 
 ```
+<b>
 This is for RedHat
     - Install Java JDK as Hadoop depends on it
         wget https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.rpm
@@ -18,6 +19,7 @@ This is for RedHat
     - Verify if it is correctly installed with
         java -version
         hadoop version
+</b>
 ```
 <img src="assets/installing.PNG" alt="Logo">
 
@@ -212,6 +214,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/shirsha-datta-30335a178/)
 
 <!--** 
+Add that these are tested in AWS too
 Some intro to big data nd apache
 How to change block size
 ** Make it more readable
