@@ -15,6 +15,21 @@ To store so much of data we use the concept of DISTRIBUTED STORAGE CLUSTER. To i
 <p align="center">
 <img src="https://miro.medium.com/max/1050/1*H4_yv5YskknPaJ4lWJpzXA.png">
 </p>
+
+## Index Of Contents
+1. Introduction
+2. [Installation]()
+3. [Configuration]()
+    i) [NameNode]()
+    ii) [DataNode]()
+    iii) [ClientNode]()
+4. [GUI]()
+5. [Contribution]()
+6. [Cool Links to Check out]()
+7. [License]()
+8. [Contact]()
+9. [Download Free PDF]()
+
   
 ## Installation (For 1 master and multi slave and multi client nodes)
 **For Master,Slave and Client Nodes** 
@@ -190,54 +205,6 @@ We can check the size of the name.txt file like:
 The default DFS block size is 32768 , and therefore it is divided into blocks before storing. 
 <img src="assets/gui nametxt.PNG" alt="Logo">
 
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-## Cool Links to Checkout 
-
-- [How Facebook stores so much data and its statistics](https://shirshadatta2000.medium.com/how-facebook-stores-so-much-data-and-its-statistics-bd0911ad39a1)
-
-- [Facebook and Hadoop](https://www.facebook.com/notes/facebook-engineering/hadoop/16121578919/)
-
-- [How Google stores massive amounts of data](https://medium.com/@avantikadasgupta/how-google-stores-massive-amounts-of-data-bigtable-d67f49bfc40e)
-
-- [Apache Hadoop Ecosystem](https://www.cloudera.com/products/open-source/apache-hadoop.html)
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-- My Name - Shirsha Datta
- 
-- You can contact me at shirshadatta2000@gmail.com
-
-- Connect with me on [LinkedIn](https://www.linkedin.com/in/shirsha-datta-30335a178/)
-
-<!--** 
-Add that these are tested in AWS too
-Some intro to big data nd apache
-heart beat and stuffs
-How to change block size
-** Make it more readable
-** safemode and tcpdump
-** Who is the one uploading the file?
-✴️ Answer: Client gets the IP from Master and uploads the file to DataNode.
-
-**Does client go to master and then read the file on slave via Master or Does Client go to slave directly and read the data?
-✴️ Answer: Client goes to slave directly and reads the data stored on slave.
--->
-
-<!-- ADD IF NECESSARY
 # Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
@@ -264,4 +231,55 @@ email, or any other method with the owners of this repository before making a ch
 * In case of changing the backend routes please submit an updated routes documentation for the same.
 * If there is an UI related change it would be great if you could attach a screenshot 
  with the resultant changes so it is easier to review for the maintainers 
+
+
+## Cool Links to Checkout 
+
+- [How Facebook stores so much data and its statistics](https://shirshadatta2000.medium.com/how-facebook-stores-so-much-data-and-its-statistics-bd0911ad39a1)
+
+- [Facebook and Hadoop](https://www.facebook.com/notes/facebook-engineering/hadoop/16121578919/)
+
+- [How Google stores massive amounts of data](https://medium.com/@avantikadasgupta/how-google-stores-massive-amounts-of-data-bigtable-d67f49bfc40e)
+
+- [Apache Hadoop Ecosystem](https://www.cloudera.com/products/open-source/apache-hadoop.html)
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+- My Name - Shirsha Datta
+ 
+- You can contact me at shirshadatta2000@gmail.com
+
+- Connect with me on [LinkedIn](https://www.linkedin.com/in/shirsha-datta-30335a178/)
+
+## Download free PDF
+
+[Claim your free PDF here]()
+
+<!--** 
+Add that these are tested in AWS too
+💯Some intro to big data nd apache
+heart beat and stuffs
+How to change block size
+** Make it more readable
+** safemode and tcpdump
+** Who is the one uploading the file?
+✴️ Answer: Client gets the IP from Master and uploads the file to DataNode.
+
+**Does client go to master and then read the file on slave via Master or Does Client go to slave directly and read the data?
+✴️ Answer: Client goes to slave directly and reads the data stored on slave.
+-->
+
+<!-- ADD IF NECESSARY💯
+# Contributing
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 -->
