@@ -46,7 +46,9 @@ This is for RedHat
         hadoop version
 
 ```
-![Preview Image](assets/installing.PNG)
+<br>
+![Preview Image](./assets/installing.PNG)
+<br>
 
 ## Configuration
 ### For Master Node also called NameNode
