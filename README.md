@@ -86,6 +86,8 @@ Then we will have to format the /nn folder of the namenode.
 ```
 We see that the process has not yet started and the assigned port is free 
 
+
+
 <img src="assets/master before.png" alt="Logo">
 
 #### Then we will have to start the service:
@@ -207,6 +209,34 @@ We can check the size of the name.txt file like:
 The default DFS block size is 32768 , and therefore it is divided into blocks before storing. 
 <img src="assets/gui nametxt.PNG" alt="Logo">
 
+## Frequently Asked Questions
+
+<b> 1. Why do we format the namenode and not other nodes?</b>
+This is bec
+
+<b>Now the question arises why do we format it only once? What happens if we do it more than once?</b>
+
+<b>What does the /nn folder store?</b>
+And describe all its files
+
+<b> 2. Client never sends the data to the master node. It stores it in the slave node.</b>
+Now lets prove the above statement.
+
+First time, the client sends some data to the namenode. 
+Why so?
+It is because it stores the index 
+
+<b> 3. When the client wants to read the data of a particular file. It reads from the datanode.</b>
+
+<b> 4. How can we change the default block size?</b>
+
+<b> 5. What is heartbeat interval time and how do we change it?</b>
+
+<b> What is safemode?</b>
+
+## Testing 
+These commands are even checked in AWS cloud.
+
 # Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
@@ -262,16 +292,20 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [Claim your free PDF here]()
 
 <!--** 
-Add that these are tested in AWS too
+Add the line in Contribution : if you are facing in any issue in configuration contact, Open ISSUE
+![before](./assets/master before.png)
+Dynamically increase volume
+💯21-10 topics
+💯Add that these are tested in AWS too
 💯Some intro to big data nd apache
-heart beat and stuffs
-How to change block size
+💯heart beat and stuffs
+💯How to change block size
 ** Make it more readable
 ** safemode and tcpdump
-** Who is the one uploading the file?
+💯** Who is the one uploading the file?
 ✴️ Answer: Client gets the IP from Master and uploads the file to DataNode.
 
-**Does client go to master and then read the file on slave via Master or Does Client go to slave directly and read the data?
+💯**Does client go to master and then read the file on slave via Master or Does Client go to slave directly and read the data?
 ✴️ Answer: Client goes to slave directly and reads the data stored on slave.
 -->
 
