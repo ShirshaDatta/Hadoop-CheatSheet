@@ -17,7 +17,7 @@ To store so much of data we use the concept of DISTRIBUTED STORAGE CLUSTER. To i
 </p>
 
 ## Index Of Contents
-1. Introduction
+1. [Introduction]()
 2. [Installation]()
 3. [Configuration]()
     i) [NameNode]()
@@ -46,7 +46,7 @@ This is for RedHat
         hadoop version
 
 ```
-<img src="assets/installing.PNG" alt="Logo">
+![Preview Image](assets/installing.PNG)
 
 ## Configuration
 ### For Master Node also called NameNode
