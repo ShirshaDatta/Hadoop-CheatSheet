@@ -32,7 +32,8 @@ Happy learning 👩‍🎓
 
 Simple answer to the the above question is to store data. Again the question, when there is Database as well as Drive storage why should we use Hadoop?
 
-<b>TO STORE BIG DATA</b>
+<b>TO STORE BIG DATA</b><br>
+
 Now the question, What is Big Data?
 An example of big data might be petabytes (1,024 terabytes) or exabytes (1,024 petabytes) of data consisting of billions to trillions of records of millions of people—all from different sources (e.g. Web, sales, customer contact center, social media, mobile data and so on).
 
