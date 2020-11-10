@@ -37,7 +37,7 @@ Simple answer to the the above question is to store data. Again the question, wh
 Now the question, What is Big Data?
 An example of big data might be petabytes (1,024 terabytes) or exabytes (1,024 petabytes) of data consisting of billions to trillions of records of millions of people—all from different sources (e.g. Web, sales, customer contact center, social media, mobile data and so on).
 
-To store so much of data we use the concept of DISTRIBUTED STORAGE CLUSTER. To implement these concepts we use Apache Hadoop.
+To store so much of data we use the concept of <b>DISTRIBUTED STORAGE CLUSTER</b>. To implement these concepts we use Apache Hadoop.
 
 <p align="center">
 <img src="https://miro.medium.com/max/1050/1*H4_yv5YskknPaJ4lWJpzXA.png">
