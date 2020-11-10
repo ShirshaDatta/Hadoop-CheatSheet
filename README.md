@@ -4,7 +4,33 @@ A cheatsheet to get you started with Hadoop
 
 But the question is why should we learn Hadoop? How will it make our life easier?
 
-Simple answer to this is to store data. Again the question, when there is Database as well as Drive storage why should we use Hadoop?
+Read till the end to know more. 
+
+Happy learning 👩‍🎓
+
+
+## Index Of Contents
+1. [Introduction](#Introduction)
+2. [Installation](#Installation)
+3. [Configuration](#Configuration)<br>
+    i) [NameNode](#NameNode)<br>
+    ii) [DataNode](#DataNode)<br>
+    iii) [ClientNode](#ClientNode)
+4. [GUI](#GUI)
+5. [Frequently Asked Questions](#FAQs)
+6. [Testing](#Testing)
+7. [Contributing](#Contributions)<br>
+    i)[Contribution Practices](#Contribution-Practices)<br>
+    ii)[Pull Request Process](#Pull-Request-Process)<br>
+    iii)[Branch Policy](#Branch-Policy)
+8. [Cool Links to Check out](#Cool-Links-To-Checkout)
+7. [License](#License)
+8. [Contact](#Contact)
+<!--9. [Download Free PDF](#Download-free-PDF)-->
+
+## Introduction
+
+Simple answer to the the above question is to store data. Again the question, when there is Database as well as Drive storage why should we use Hadoop?
 
 <b>TO STORE BIG DATA</b>
 Now the question, What is Big Data?
@@ -16,21 +42,6 @@ To store so much of data we use the concept of DISTRIBUTED STORAGE CLUSTER. To i
 <img src="https://miro.medium.com/max/1050/1*H4_yv5YskknPaJ4lWJpzXA.png">
 </p>
 
-## Index Of Contents
-1. [Introduction]()
-2. [Installation]()
-3. [Configuration]()
-    i) [NameNode]()
-    ii) [DataNode]()
-    iii) [ClientNode]()
-4. [GUI]()
-5. [Contribution]()
-6. [Cool Links to Check out]()
-7. [License]()
-8. [Contact]()
-9. [Download Free PDF]()
-
-  
 ## Installation (For 1 master and multi slave and multi client nodes)
 **For Master,Slave and Client Nodes** 
 ```
@@ -51,7 +62,8 @@ This is for RedHat
 
 
 ## Configuration
-### For Master Node also called NameNode
+## NameNode
+(NameNode is also called Master Node)
 ```
     mkdir /nn
     vim /etc/hadoop/core-site.xml
@@ -90,7 +102,7 @@ We see that the process has not yet started and the assigned port is free
 
 <img src="assets/master before.png" alt="Logo">
 
-#### Then we will have to start the service:
+<b> Then we will have to start the service:</b>
 ```
 hadoop-daemon.sh start namenode
 jps
@@ -104,7 +116,8 @@ To view the no of slave nodes connected
 
 <img src="assets/dfsadmin master.PNG" alt="Logo">
 
-### For Slave Node also called DataNode
+### DataNode
+(DataNode is also called Slave Node)
 
 ```
     vim /etc/hadoop/core-site.xml
@@ -126,7 +139,7 @@ To view the no of slave nodes connected
 The Configured files:
 <img src="assets/slave files.PNG" alt="Logo">
 
-#### Then we will have to start the service
+<b>Then we will have to start the service</b>
 Make sure that if you doing the setup locally using VM's , then the firewall should be stopped in the master node.
 To check so:
 ```
@@ -149,7 +162,7 @@ To view the no of slave nodes connected
 ```hadoop dfsadmin -report```
 <img src="assets/slave connected" alt="Logo">
 
-### For Client Node 
+### ClientNode 
 
 ```
     vim /etc/hadoop/core-site.xml
@@ -189,7 +202,8 @@ The attached screenshots of the above mentioned commands are :
 <img src="assets/cmds client2.PNG" alt="Logo">
 <img src="assets/cmds client3.png" alt="Logo">
 
-### We can also visualize using GUI
+## GUI
+We can also visualize using GUI
     Namenode : MasterIP:50070
     Datanode : SlaveIP:50075
 <img src="assets/gui.PNG" alt="Logo">
@@ -209,41 +223,29 @@ We can check the size of the name.txt file like:
 The default DFS block size is 32768 , and therefore it is divided into blocks before storing. 
 <img src="assets/gui nametxt.PNG" alt="Logo">
 
-## Frequently Asked Questions
-
-<b> 1. Why do we format the namenode and not other nodes?</b>
-This is bec
-
-<b>Now the question arises why do we format it only once? What happens if we do it more than once?</b>
-
-<b>What does the /nn folder store?</b>
-And describe all its files
-
-<b> 2. Client never sends the data to the master node. It stores it in the slave node.</b>
-Now lets prove the above statement.
-
-First time, the client sends some data to the namenode. 
-Why so?
-It is because it stores the index 
-
-<b> 3. When the client wants to read the data of a particular file. It reads from the datanode.</b>
-
-<b> 4. How can we change the default block size?</b>
-
-<b> 5. What is heartbeat interval time and how do we change it?</b>
-
-<b> What is safemode?</b>
+## FAQs
+Will come up soon, stay tuned :)
 
 ## Testing 
 These commands are even checked in AWS cloud.
 
-# Contributing
+## Contributions
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+### Contribution Guidelines
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change. 
 
 
-## Pull Request Process
+### Contribution Practices
+* Write clear and meaningful commit messages.
+* If you report a bug please provide steps to reproduce the bug.
+* In case of changing the backend routes please submit an updated routes documentation for the same.
+* If there is an UI related change it would be great if you could attach a screenshot 
+ with the resultant changes so it is easier to review for the maintainers 
+
+### Pull Request Process
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
    build.
 2. Update the README.md with details of changes to the interface, this includes new environment 
@@ -252,17 +254,10 @@ email, or any other method with the owners of this repository before making a ch
     it will be merged with the   master branch 
 4. Associate each Pull Request with the required issue number 
 
-## Branch Policy 
+### Branch Policy 
 * development: If you are making a contribution make sure to send your Pull Request to this branch . All
             developments goes in this branch.
 * master: After significant features/bug-fixes are accumulated in development branch we merge it with the master branch.
-
-## Contribution Practices
-* Write clear and meaningful commit messages.
-* If you report a bug please provide steps to reproduce the bug.
-* In case of changing the backend routes please submit an updated routes documentation for the same.
-* If there is an UI related change it would be great if you could attach a screenshot 
- with the resultant changes so it is easier to review for the maintainers 
 
 
 ## Cool Links to Checkout 
