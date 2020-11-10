@@ -42,7 +42,8 @@ To store so much of data we use the concept of DISTRIBUTED STORAGE CLUSTER. To i
 <img src="https://miro.medium.com/max/1050/1*H4_yv5YskknPaJ4lWJpzXA.png">
 </p>
 
-## Installation (For 1 master and multi slave and multi client nodes)
+## Installation 
+(For 1 master and multi slave and multi client nodes)
 **For Master,Slave and Client Nodes** 
 ```
 This is for RedHat
@@ -282,11 +283,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/shirsha-datta-30335a178/)
 
+<!--
 ## Download free PDF
+
 
 [Claim your free PDF here]()
 
-<!--** 
+
+** 
 Add the line in Contribution : if you are facing in any issue in configuration contact, Open ISSUE
 ![before](./assets/master before.png)
 Dynamically increase volume
